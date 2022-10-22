@@ -5,7 +5,7 @@ class Card:
         self.image = self.get_image()
 
     def __str__(self):
-        if self.value in range(2,11):
+        if self.value in range(2, 11):
             value = self.value
         elif self.value == 1:
             value = "ace"
@@ -23,4 +23,4 @@ class Card:
         return f"Card(value={self.value}, colour={self.colour}, image={self.image})"
 
     def get_image(self):
-        return f"resources/card_images/{str(self).replace(' ', '_')}.png"
+        return str(self).replace(' ', '_') + ".png"

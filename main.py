@@ -1,17 +1,8 @@
-from CardDeck import CardDeck
+import grapher
+from classes import card_deck
 
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-import pathlib
+deck = card_deck.CardDeck()
 
-pathlib.Path(".").joinpath('resources/card_images')
-
-figure, axes_list = plt.subplots(nrows=4, ncols=13)
-plt.show()
-
-deck = CardDeck()
-print(deck)
-print(repr(deck))
-
+grapher.draw(deck)
 deck.shuffle()
-print(deck)
+grapher.draw(deck)
